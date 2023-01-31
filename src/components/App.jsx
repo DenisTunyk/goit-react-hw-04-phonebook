@@ -19,7 +19,6 @@ export const App = () => {
       name: name,
       number: number
     }
-    console.log(contact)
     
     const isSet = contacts.find(item => item.name.toLowerCase() === name.toLowerCase());
 
@@ -47,15 +46,12 @@ export const App = () => {
     const parsedContacts = JSON.parse(contacts);
     if (parsedContacts) {
       setContacts(parsedContacts)
-      console.log(true)
     }
   }, [])
   
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
-    return () => {
-      localStorage.setItem('contacts', JSON.stringify(contacts));
-    };
+    
   }, [contacts]);
 
 
