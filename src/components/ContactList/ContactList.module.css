@@ -1,0 +1,14 @@
+ul {
+    padding-left: 0px;
+}
+li{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    font-size: 26px;
+    margin-top: 10px;
+    
+}
+button{
+    margin-left: 0px;
+}
